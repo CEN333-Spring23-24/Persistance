@@ -18,10 +18,12 @@
         <td>{{ item[key] }}</td>
       </ng-container>
       <td class="action-button-col">
-        <m-delete-button
+        <button
           *ngIf="showDeleteButton"
-          (onClick)="removeItem(item.id)"
-        ></m-delete-button>
+          (click)="removeItem(item.id)"
+          class="button">
+          <span>X</span>
+        </button>
         <button
           *ngIf="showMoreDetails"
           (click)="showDetails(item.id)"
